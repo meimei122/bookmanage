@@ -5,6 +5,9 @@ orange.tcmMuseum = {
 	init: function(){
 		$('#tcmMuseumGrid').datagrid({ 
 			url:'organization/getTcmInformation',
+			queryParams:{
+				areaCode : $('#tcmMuseum_district').combobox('getValue')
+			},
 			rownumbers:true,
 			striped:true,
 			showFooter:true,
@@ -26,8 +29,9 @@ orange.tcmMuseum = {
 	},
 	queryBtn: function(){		//查询
 		$('#tcmMuseumGrid').datagrid('load',{
-			
+			areaCode : $('#tcmMuseum_district').combobox('getValue')
 		});
+		debugger;
 	},
 	exportBtn:function(){		//导出
 		
