@@ -1,5 +1,8 @@
 package bookmanage.dao;
 
-public class AdminDao {
+import bookmanage.entity.AdminEntity;
 
+public interface AdminDao {
+	
+	public AdminEntity Login();
 }
