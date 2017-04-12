@@ -4,5 +4,5 @@ import bookmanage.entity.AdminEntity;
 
 public interface AdminDao {
 	
-	public AdminEntity Login();
+	public AdminEntity login(AdminEntity adminEntity);
 }

@@ -24,8 +24,26 @@ $(document).ready(function() {
   createCode();
   //测试提交，对接程序删除即可
   $(".submit_btn").click(function(){
-	  location.href="javascrpt:;"/*tpa=http://***index.html*/;
-	  });
+	  var ausername = $("#name").val(),
+	  	  apass = $("#psw").val();
+	  if(ausername==""||apass==""){
+		  $("#errormessage").html("用户名或密码不能为空");
+	  }else{
+		  $.ajax({
+	          url: 'loginCheck',
+	          type: 'post',
+	          data:{ausername:ausername,apass:apass},
+	          cache: true,
+	          success: function (data) {
+	        	  if(data.param==true){
+	        		  window.location.href="index";
+	        	  }else{
+	        		  $("#errormessage").html("用户名或密码错误");
+	        	  }
+	          }
+	  	   });
+	  }
+  	});
 });
 </script>
 </head>
@@ -35,12 +53,14 @@ $(document).ready(function() {
   <strong>图书管理后台系统</strong>
   <em>Management System</em>
  </dt>
- <form id="adminLogin" action="index" method="post">
+	<div style="height: 15px;">
+		<i id="errormessage" style="font-style: normal;color: #DC143C;height: 112px;"></i>
+	</div>
 	 <dd class="user_icon">
-	  <input type="text" placeholder="账号" class="login_txtbx"/>
+	  <input type="text" placeholder="账号" class="login_txtbx" id="name"/>
 	 </dd>
 	 <dd class="pwd_icon">
-	  <input type="password" placeholder="密码" class="login_txtbx"/>
+	  <input type="password" placeholder="密码" class="login_txtbx" id="psw"/>
 	 </dd>
 	 <dd class="val_icon">
 	  <div class="checkcode">
@@ -52,7 +72,6 @@ $(document).ready(function() {
 	 <dd>
 	  <input type="submit" value="立即登陆" class="submit_btn"/>
 	 </dd>
- </form>
 </dl>
 </body>
 </html>
