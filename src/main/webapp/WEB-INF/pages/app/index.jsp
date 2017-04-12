@@ -42,6 +42,6 @@
 	</div>
 
 </div>
-
+<script type="text/javascript" data-main="resources/js/app/main.js" src="resources/plugins/require/require-2.1.11.js"></script>
 </body>
 </html>
