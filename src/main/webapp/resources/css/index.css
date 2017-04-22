@@ -65,7 +65,7 @@ a {
 	background-repeat: no-repeat;
 	background-position: 10px center;
 	color: #f5f5f5;
-	font-size: 14px;
+	font-size: 17px;
 	position: relative;
 	line-height: 48px;
 	cursor: pointer;
@@ -78,7 +78,8 @@ a {
 
 .leftsidebar_box dd a {
 	color: #f5f5f5;
-	line-height: 20px;
+	line-height: 45px;
+    font-size: 16px;
 }
 
 .leftsidebar_box dt img {
@@ -101,4 +102,13 @@ a {
 
 .statistics dt {
 	background-image: url(../images/left/statistics.png)
+}
+
+.onclick{
+	background-color: #6c3;
+}
+.right{
+	width: 88%;
+    float: right;
+    height: 100%;
 }

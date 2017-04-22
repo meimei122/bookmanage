@@ -4,6 +4,8 @@
 require.config({
 	baseUrl: 'resources/js',
 	paths: {
+		orange:'app/orange',
+		jquery:'plugins/jquery/jquery.min',
 		
 	},
 	shim: {
@@ -14,7 +16,7 @@ require.config({
 /**
  * 加载组件orange、bootstrap，并启动应用
  */	
-require(['orange','bootstrap'], function(orange) {
+require(['orange'], function(orange) {
 	 orange.start();
 });
 

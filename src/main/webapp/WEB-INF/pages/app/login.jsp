@@ -10,9 +10,9 @@
 body{height:100%;background:#16a085;overflow:hidden;}
 canvas{z-index:-1;position:absolute;}
 </style>
-<script src="resources/plugins/jquery/jquery.min.js" ></script>
-<script src="resources/plugins/jquery/Particleground.js" ></script>
-<script src="resources/plugins/jquery/verificationNumbers.js" ></script>
+<script src="resources/js/plugins/jquery/jquery.min.js" ></script>
+<script src="resources/js/plugins/jquery/Particleground.js" ></script>
+<script src="resources/js/plugins/jquery/verificationNumbers.js" ></script>
 <script>
 $(document).ready(function() {
   //粒子背景特效
