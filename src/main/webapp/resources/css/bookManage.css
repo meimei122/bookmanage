@@ -1,0 +1,12 @@
+.tool_menu li{
+	float: left;
+	background-color: #eee;
+	padding: 8px;
+}
+.tool_menu li a{
+	color: #626262;
+}
+
+.tool_menu .glyphicon{
+	top: 2px;
+}

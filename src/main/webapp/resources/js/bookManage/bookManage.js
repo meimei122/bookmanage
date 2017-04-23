@@ -3,7 +3,7 @@
  * 
  */
 (function(){
-	require(['jquery','bootstrap','bootTable'],function(jquery){
+	require(['jquery','bootstrap','bootTable','bootTableExport','bootTableCn'],function(jquery,bootstrap,bootTable,bootTableExport,bootTableCn){
 		
 		window.operateEvents = {
 		        'click .like': function (e, value, row, index) {
@@ -23,9 +23,12 @@
 			$("#book_manage_table").bootstrapTable({
 				toolbar:'#book_manage_toolbar',
 				url:"BookController/book",
-			 	height: 380,
+			 	height: 580,
 			 	striped:true,
 			    search:false,
+			    showRefresh:true,
+			    showColumns:true,
+			    showExport:true,
 			    showColumns:true,//显示字段
 			    pagination:true,//底部数据信息
 			    sidePagination:"server",
@@ -38,8 +41,9 @@
 			        {field:'book_author',title:'作者',valign: "middle",align:"center"},
 			        {field:'book_type',title:'图书类型',valign: "middle",align:"center"},
 			        {field:'book_price',title:'图书价格',valign: "middle",align:"center"},
-			        {field:'book_avanum',title:'可借数量',valign: "middle",align:"center"},
-			        {title:'借阅',valign: "middle",align:"center",events: operateEvents,
+			        {field:'book_totalnum',title:'总数',valign: "middle",align:"center"},
+			        {field:'book_avanum',title:'可借数量',valign: "middle",align:"center"}
+			        /*{title:'借阅',valign: "middle",align:"center",events: operateEvents,
 			            formatter: function (value, row, index) {
 			                return [
 			                        '<a class="like" title="Borrow">',
@@ -47,7 +51,7 @@
 			                        '</a>  '
 			                    ].join('');
 			                }
-			            }
+			            }*/
 			    ]]
 			});
 			

@@ -5,17 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="resources/css/bookManage.css" />
 <script type="text/javascript" src="resources/js/bookManage/bookManage.js"></script>
 </head>
 <body>
 	<div id="book_manage_div">
 		<div id="book_manage_toolbar">
-			<div id="query" class="query_div">
-				<input id="book_isbn"  class="booknum" placeholder=" 书 号"/>
-				<input id="book_name"  class="bookname" placeholder=" 书 名"/>
-				<input id="book_type" class="booktype" placeholder=" 类 型"/>
-				<button type="button" class="btn btn-info" id="querybtn">查 询</button>
-			</div>
+			<ul id="toolMenu" class="tool_menu">
+				<li><a id="addBook"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加图书信息</a></li>
+				<li><a id="updateBook"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改图书信息</a></li>
+				<li><a id="deleteBook"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除图书信息</a></li>
+			</ul>
 	    </div>
 		<table id="book_manage_table">
 	    </table>
