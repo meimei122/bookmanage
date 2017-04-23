@@ -4,11 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="resources/js/bookManage/returnBook.js"></script>
 <title>还书管理</title>
 </head>
 <body>
 	<div id="return_book_div">
-		还书
+	
 	</div>
 </body>
 </html>

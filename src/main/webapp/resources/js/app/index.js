@@ -2,9 +2,7 @@
 	require(['orange','jquery'],function(orange,jquery){
 		var menu = [{dlClass:'system_log',title:'图书管理',src:'resources/images/left/select_xl01.png',
 						data:[{ddTile:'还书管理',selector:'#return_book_div',path:'bookManage/returnBook'},
-						      {ddTile:'添加图书信息',selector:'#add_book_div',path:'bookManage/addBook'},
-						      {ddTile:'修改图书信息',selector:'#update_book_div',path:'bookManage/updateBook'},
-						      {ddTile:'删除图书信息',selector:'#delete_book_div',path:'bookManage/deleteBook'}]},
+						      {ddTile:'图书信息管理',selector:'#book_manage_div',path:'bookManage/bookManage'}]},
 			        {dlClass:'custom',title:'学生信息管理',src:'resources/images/left/select_xl01.png',
 						data:[{ddTile:'重置学生密码',selector:'#delete_student_div',path:'studentInfo/deleteStudent'},
 						      {ddTile:'删除学生信息',selector:'#rest_student',path:'studentInfo/restStudent'}]},
