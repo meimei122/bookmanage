@@ -1,0 +1,16 @@
+#bookType{
+	height: 400px;
+	width: 341px; 
+}
+#borrowType{
+	height: 400px;
+	width: 341px; 
+}
+#statist_div .col-lg-3{
+	top: 60px;
+}
+
+#statist_div h3{
+	text-align: center;
+    margin-left: 25px;
+}
