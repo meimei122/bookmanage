@@ -25,7 +25,7 @@
 				</div>
 				<div class="buttons">
 					<button class="btn btn-primary submit" value="register" type="submit">确       定</button>
-					<button class="btn btn-info" value="cancel" type="button">取       消</button>
+					<button class="btn btn-info cancel" value="cancel" type="button">取       消</button>
 				</div>
 			</form>
 		</div>

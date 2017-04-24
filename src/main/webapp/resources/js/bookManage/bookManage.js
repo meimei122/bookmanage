@@ -34,8 +34,8 @@
 			    sidePagination:"server",
 			    pageSize:5,
 			    pageList:[5,10,15,20],
-				columns:[[{"title": "图书信息表","halign": "center","align": "center","colspan": 8}
-					],[
+				columns:[[{"title": "图书信息表","halign": "center","align": "center","colspan": 9}
+					],[{checkbox: true,align: "center"},
 			        {field:'book_isbn',title:'书号',valign: "middle",align:"center"},
 			        {field:'book_name',title:'书名',valign: "middle",align:"center"},
 			        {field:'book_author',title:'作者',valign: "middle",align:"center"},
@@ -96,7 +96,7 @@
                     $(this).find('input').click();  
                 });  
             }  
-            initTableCheckbox(); 
+            //initTableCheckbox(); 
                 
 			
 		$('#addBook').on('click',function(){

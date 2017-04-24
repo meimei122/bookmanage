@@ -1,7 +1,3 @@
-body{
-	text-align: center;
-	margin: auto;
-}
 .person .title{
 	color: #74adaa;
 	font-size: 36px;
@@ -16,6 +12,11 @@ body{
     background: transparent;
     color: #74adaa;
 }
+
+.personFormStyle{
+	margin-top: 70px;
+}
+
 /*修改input输入框中提示信息文字颜色*/
 .comInput::-webkit-input-placeholder {
   color: #74adaa;
@@ -32,8 +33,8 @@ body{
 }
 
 .buttons button{
-	margin-top: 10px;
-	width: 48%;
+	margin-top: 26px;
+    width: 49%;
 	height: 50px;
     font-size: 25px;
 }
@@ -41,6 +42,11 @@ body{
 /* 按钮样式 */
 .submit{
     float: left;
+    margin-left: 4px;
+}
+
+.cancel{
+	float: right;
 }
 
 .cancel{
@@ -49,5 +55,5 @@ body{
 }
 
 .personFormStyle .form-group{
-	height: 68px;
+	height: 95px;
 }

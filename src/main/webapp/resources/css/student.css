@@ -13,5 +13,10 @@
 }
 
 #student_div button{
-	height: 34px;
+	height: 32px;
+}
+
+.sidType{
+	height: 25px;
+	border-radius: 5px;
 }

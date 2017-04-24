@@ -34,8 +34,8 @@
 			    sidePagination:"server",
 			    pageSize:5,
 			    pageList:[5,10,15,20],
-				columns:[[{"title": "图书信息表","halign": "center","align": "center","colspan": 8}
-					],[
+				columns:[[{"title": "学生信息表","halign": "center","align": "center","colspan": 8}
+					],[{checkbox: true,align: "center"},
 			        {field:'sid',title:'学号',valign: "middle",align:"center"},
 			        {field:'username',title:'用户名',valign: "middle",align:"center"},
 			        {field:'tel',title:'电话',valign: "middle",align:"center"},
@@ -93,7 +93,7 @@
                     $(this).find('input').click();  
                 });  
             }  
-            initTableCheckbox(); 
+           // initTableCheckbox(); 
 		
 		//带参数查询	
 		$("#querybtn").on('click',function(){
