@@ -1,0 +1,17 @@
+.tool_menu li{
+	float: left;
+	background-color: #eee;
+	padding: 8px;
+}
+
+.tool_menu li a{
+	color: #626262;
+}
+
+#student_div .glyphicon{
+	top: 2px;
+}
+
+#student_div button{
+	height: 34px;
+}

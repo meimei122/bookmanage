@@ -1,5 +1,5 @@
 /**
- * 图书管理js
+ * 学生管理js
  * 
  */
 (function(){
@@ -20,13 +20,13 @@
 //		        	});
 		        }
 		    };
-			$("#book_manage_table").bootstrapTable({
-				toolbar:'#book_manage_toolbar',
+			$("#student_table").bootstrapTable({
+				toolbar:'#student_toolbar',
 				//url:"",
 			 	height: 580,
 			 	striped:true,
 			    search:false,
-			    showRefresh:true,
+			    showRefresh:false,
 			    showColumns:true,
 			    showExport:true,
 			    showColumns:true,//显示字段
@@ -36,13 +36,10 @@
 			    pageList:[5,10,15,20],
 				columns:[[{"title": "图书信息表","halign": "center","align": "center","colspan": 8}
 					],[
-			        {field:'book_isbn',title:'书号',valign: "middle",align:"center"},
-			        {field:'book_name',title:'书名',valign: "middle",align:"center"},
-			        {field:'book_author',title:'作者',valign: "middle",align:"center"},
-			        {field:'book_type',title:'图书类型',valign: "middle",align:"center"},
-			        {field:'book_price',title:'图书价格',valign: "middle",align:"center"},
-			        {field:'book_totalnum',title:'总数',valign: "middle",align:"center"},
-			        {field:'book_avanum',title:'可借数量',valign: "middle",align:"center"}
+			        {field:'sid',title:'学号',valign: "middle",align:"center"},
+			        {field:'username',title:'用户名',valign: "middle",align:"center"},
+			        {field:'tel',title:'电话',valign: "middle",align:"center"},
+			        {field:'borrow_num',title:'可以借阅数量',valign: "middle",align:"center"},
 			        /*{title:'借阅',valign: "middle",align:"center",events: operateEvents,
 			            formatter: function (value, row, index) {
 			                return [
@@ -97,17 +94,6 @@
                 });  
             }  
             initTableCheckbox(); 
-                
-			
-		$('#addBook').on('click',function(){
-			$('.update').css({'display':'none'});
-			$('.add').css({'display':'block'});
-		});
-		
-		$('#updateBook').on('click',function(){
-			$('.add').css({'display':'none'});
-			$('.update').css({'display':'block'});
-		});
 		
 		//带参数查询	
 		$("#querybtn").on('click',function(){

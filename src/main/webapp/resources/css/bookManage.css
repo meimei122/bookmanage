@@ -3,10 +3,36 @@
 	background-color: #eee;
 	padding: 8px;
 }
+
 .tool_menu li a{
 	color: #626262;
 }
 
-.tool_menu .glyphicon{
+#book_manage_div .glyphicon{
 	top: 2px;
+}
+
+#book_manage_div button{
+	height: 34px;
+}
+
+#book_manage_div .modal-body{
+	height: 335px;
+}
+
+#book_manage_div .form-group{
+	width: 50%;
+    float: left;
+}
+
+#book_manage_div .form-control{
+	width: 80%;
+}
+
+.modal-footer .add{
+	float: right;
+}
+
+.modal-footer .update{
+	float: right;
 }

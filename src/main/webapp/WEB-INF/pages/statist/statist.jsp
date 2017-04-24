@@ -8,7 +8,17 @@
 </head>
 <body>
 	<div id="statist_div">
-		图表页面
+		<div class="col-lg-2"></div>
+		<div class="col-lg-3 bookClass">
+			<h3>图书类型统计占比图</h3>
+			<div id="bookType"></div>
+		</div>
+		<div class="col-lg-2"></div>
+		<div class="col-lg-3 borrowClass">
+			<h3>借书类型统计占比图</h3>
+			<div id="borrowType"></div>
+		</div>
+		<div class="col-lg-2"></div>
 	</div>
 </body>
 </html>
