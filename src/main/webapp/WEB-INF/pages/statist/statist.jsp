@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="" href="resources/css/statist.css" >
+<script type="text/javascript" src="resources/js/statist/statist.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
