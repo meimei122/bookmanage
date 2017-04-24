@@ -1,5 +1,5 @@
 package bookmanage.dao;
 
-public class BorrowBookDao {
+public interface BorrowBookDao {
 
 }
