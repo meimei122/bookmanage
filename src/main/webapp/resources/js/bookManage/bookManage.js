@@ -36,11 +36,30 @@
 			$('.update').css({'display':'none'});
 			$('.add').css({'display':'block'});
 			
-			$.post('BookController/bookAdd',{},function(data){
+			$('#book_isbn1').val(""),
+			$('#book_name').val(""),
+			$('#book_author').val(""),
+			$('#book_type').val(""),
+			$('#book_price').val(""),
+			$('#book_totalnum').val(""),
+			$('#book_avanum').val("");
+			
+			$('#addBtn').on('click',function(){
+				var book_isbn = $('#book_isbn1').val(),
+				book_name = $('#book_name').val(),
+				book_author = $('#book_author').val(),
+				book_type = $('#book_type').val(),
+				book_price = $('#book_price').val(),
+				book_totalnum = $('#book_totalnum').val(),
+				book_avanum = $('#book_avanum').val();
+			
+			
+			$.post('BookController/bookAdd',{book_isbn:book_isbn,book_name:book_name,book_author:book_author,book_type:book_type,book_price:book_price,book_totalnum:book_totalnum,book_avanum:book_avanum},function(data){
 				  if(data>0){
 					  $("#book_manage_table").bootstrapTable('refresh', {url: "BookController/book"});
 				  }
 				});
+			});
 			
 		});
 		
@@ -49,27 +68,44 @@
 		$('#updateBook').on('click',function(){
 			$('.add').css({'display':'none'});
 			$('.update').css({'display':'block'});
+			var book_isbn,book_name,book_author,book_type,book_price,book_totalnum,book_avanum;
 			
 			var row = $.map($("#book_manage_table").bootstrapTable('getSelections'), function (row) {
 	        	return row
-	        }),
-			  id;
+	        });
 		  
 			if (row.length > 1) {
 			  alert("选择项过多,请选择最多一项进行修改");
 			  return false ;
 			  }
 			if(row.length == 0) {
-				alert("请选择需要重置的数据！");
+				alert("请选择需要修改的数据！");
 				return false ;
-			  }else{
-				id = row[0].sid;  
 			  }
-		  
-			$.post('BookController/bookUpdate',{sids:id},function(data){
-			  if(data>0){
-				  $("#book_manage_table").bootstrapTable('refresh', {url: "BookController/book"});
-			  }
+			
+			debugger;
+			$('#book_isbn2').val(row[0].book_isbn),
+			$('#book_name').val(row[0].book_name),
+			$('#book_author').val(row[0].book_author),
+			$('#book_type').val(row[0].book_type),
+			$('#book_price').val(row[0].book_price),
+			$('#book_totalnum').val(row[0].book_totalnum),
+			$('#book_avanum').val(row[0].book_avanum);
+			
+			$('#updateBtn').on('click',function(){
+				book_isbn = $('#book_isbn2').val(),
+				book_name = $('#book_name').val(),
+				book_author = $('#book_author').val(),
+				book_type = $('#book_type').val(),
+				book_price = $('#book_price').val(),
+				book_totalnum = $('#book_totalnum').val(),
+				book_avanum = $('#book_avanum').val();
+				
+				$.post('BookController/bookUpdate',{book_isbn:book_isbn,book_name:book_name,book_author:book_author,book_type:book_type,book_price:book_price,book_totalnum:book_totalnum,book_avanum:book_avanum},function(data){
+				  if(data>0){
+					  $("#book_manage_table").bootstrapTable('refresh', {url: "BookController/book"});
+				  }
+				});
 			});
 		});
 		
@@ -87,7 +123,7 @@
 	  			$("#delcfmModel").modal('show');
 	  			$("#sure").on("click", function(){
 	  				for(var i = 0; i < row.length;i++){
-	  					ids += ","+ row[i].sid;
+	  					ids += ","+ row[i].book_isbn;
 	  				}
 	  				$.post('BookController/bookDelete',{ids:ids},function(data){
 	  	        	  if(data>0){

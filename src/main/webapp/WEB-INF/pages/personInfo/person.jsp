@@ -15,7 +15,7 @@
 			<h2 class="title">个 人 信 息</h2>
 			<form id="personForm" class="personFormStyle" action="updateUser" method="post">
 				<div class="form-group">
-					<input type="text" class="comInput" id="username" name="username" placeholder="用户名" disabled/>
+					<input type="text" class="comInput" id="ausername" name="ausername" placeholder="用户名" disabled/>
 				</div>
 				<div class="form-group">
 					<input type="password" class="comInput" id="beforPassword" name="beforPassword" placeholder="原始密码"/>

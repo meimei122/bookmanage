@@ -36,42 +36,46 @@
 						</h4>
 					</div>
 					<div class="modal-body">
-						<div class="form-group">
+						<div class="form-group add">
 							<label for="name">书  号</label>
-							<input type="text" class="form-control">
+							<input type="text" class="form-control" id="book_isbn1">
+						</div>
+						<div class="form-group update">
+							<label for="name">书  号</label>
+							<input type="text" class="form-control" id="book_isbn2" disabled>
 						</div>
 						<div class="form-group">
 							<label for="name">书   名</label>
-							<input type="text" class="form-control">
+							<input type="text" class="form-control" id="book_name">
 						</div>
 						<div class="form-group">
 							<label for="name">作   者</label>
-							<input type="text" class="form-control">
+							<input type="text" class="form-control" id="book_author">
 						</div>
 						<div class="form-group">
 							<label for="name">图书类型</label>
-							<input type="text" class="form-control">
+							<input type="text" class="form-control" id="book_type">
 						</div>
 						<div class="form-group">
 							<label for="name">图书价格</label>
-							<input type="text" class="form-control">
+							<input type="text" class="form-control" id="book_price">
 						</div>	
 						<div class="form-group">
 							<label for="name">总   数</label>
-							<input type="text" class="form-control">
+							<input type="text" class="form-control" id="book_totalnum">
 						</div>	
 						<div class="form-group">
 							<label for="name">可借数量</label>
-							<input type="text" class="form-control">
+							<input type="text" class="form-control" id="book_avanum">
 						</div>				
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">关闭
 						</button>
-						<button type="button" class="btn btn-primary add" data-dismiss="modal">
+						<button type="button" class="btn btn-primary add" id="addBtn" data-dismiss="modal">
 							保存
 						</button>
-						<button type="button" class="btn btn-primary update" data-dismiss="modal">
+						<button type="button" class="btn btn-primary update" id="updateBtn" data-dismiss="modal">
 							保存
 						</button>
 					</div>

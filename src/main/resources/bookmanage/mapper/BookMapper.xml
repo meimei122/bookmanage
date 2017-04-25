@@ -17,7 +17,7 @@
 	</select>
 	
 	<select id="book" resultMap="BookResultMap">
-		select * from book
+		select * from book order by book_isbn desc
 	</select>
 	
 		

@@ -18,4 +18,16 @@ public class AdminServiceImpl implements AdminService {
 		// TODO Auto-generated method stub
 		return adminDao.login(adminEntity);
 	}
+
+	@Override
+	public AdminEntity adminInfo(AdminEntity adminEntity) {
+		// TODO Auto-generated method stub
+		return adminDao.adminInfo(adminEntity);
+	}
+
+	@Override
+	public int updateAdmin(AdminEntity adminEntity) {
+		// TODO Auto-generated method stub
+		return adminDao.updateAdmin(adminEntity);
+	}
 }

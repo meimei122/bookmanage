@@ -12,4 +12,12 @@
 		select * from admin where ausername=#{ausername} and apass=#{apass}
 	</select>
 	
+	<select id="adminInfo" parameterType="AdminEntity" resultMap="AdminResultMap">
+		select * from admin where aid = #{aid}
+	</select>
+	
+	<update id="updateAdmin" parameterType="AdminEntity">
+		 update admin set apass = #{apass} where aid=#{aid}
+	</update>
+	
 </mapper>

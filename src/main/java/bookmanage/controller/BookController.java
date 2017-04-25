@@ -100,7 +100,7 @@ public class BookController {
 	@ResponseBody
 	@RequestMapping(value = "bookUpdate",method = RequestMethod.POST)
 	public int bookUpdate(BookEntity book){
-		int i = bookService.bookAdd(book);
+		int i = bookService.bookUpdate(book);
 		return i;
 	}
 	

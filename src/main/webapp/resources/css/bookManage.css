@@ -36,3 +36,12 @@
 .modal-footer .update{
 	float: right;
 }
+
+#delcfmModel{
+	height: 275px;
+    top: 55px;
+}
+
+#delcfmModel .modal-body{
+	height: 50px;
+}
