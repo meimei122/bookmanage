@@ -26,4 +26,6 @@ public interface StudentService {
 	 * @return
 	 */
 	public int deleteStu(List<Integer> list);
+	
+	
 }

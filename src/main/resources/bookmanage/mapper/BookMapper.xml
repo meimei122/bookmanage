@@ -20,4 +20,43 @@
 		select * from book
 	</select>
 	
+		
+	<!-- 更新图书信息 -->  
+	<update id="bookUpdate" parameterType="BookEntity">  
+	    update book   
+	    <set>  
+	        <if test="book_name!=null and book_name!='' ">  
+	            book_name = #{book_name},   
+	        </if>  
+	        <if test="book_price!=null and book_price!='' ">  
+	            book_price = #{book_price},   
+	        </if>  
+	        <if test="book_type!=null and book_type!='' ">  
+	            book_type = #{book_type},   
+	        </if>  
+	        <if test="book_author!=null and book_author!='' ">  
+	            book_author = #{book_author},   
+	        </if> 
+	        <if test="book_totalnum!=null and book_totalnum!='' ">  
+	            book_totalnum = #{book_totalnum},   
+	        </if> 
+	        <if test="book_avanum!=null and book_avanum!='' ">  
+	            book_avanum = #{book_avanum}
+	        </if>  
+	    </set>  
+	    where book_isbn = #{book_isbn};   
+	</update>  
+	
+	<insert id="bookAdd" parameterType="BookEntity" > 
+        insert into book(book_isbn,book_name,book_price,book_type,book_author,book_totalnum,book_avanum) 
+        values(#{book_isbn},#{book_name},#{book_price},#{book_type},#{book_author},#{book_totalnum},#{book_avanum})  
+    </insert>
+	
+	<delete id="bookDelete"  >  
+    	delete from book where book_isbn in  
+      <foreach collection="list" item = "book_isbn" open="(" separator="," close=")">  
+            #{book_isbn}  
+	  </foreach>    
+	</delete>
+	
 </mapper>

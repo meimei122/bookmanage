@@ -27,4 +27,22 @@ public class BookServiceImpl implements BookService {
 		return bookDao.book(book);
 	}
 
+	@Override
+	public int bookAdd(BookEntity book) {
+		// TODO Auto-generated method stub
+		return bookDao.bookAdd(book);
+	}
+
+	@Override
+	public int bookUpdate(BookEntity book) {
+		// TODO Auto-generated method stub
+		return bookDao.bookUpdate(book);
+	}
+
+	@Override
+	public int bookDelete(List<Integer> list) {
+		// TODO Auto-generated method stub
+		return bookDao.bookDelete(list);
+	}
+
 }

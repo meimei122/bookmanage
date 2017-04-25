@@ -27,7 +27,7 @@
     	delete from student where sid in  
       <foreach collection="list" item = "sid" open="(" separator="," close=")">  
             #{sid}  
-    </foreach>    
-  </delete> 
+	  </foreach>    
+	</delete> 
 	
 </mapper>

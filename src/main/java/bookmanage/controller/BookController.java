@@ -79,4 +79,45 @@ public class BookController {
 		data = JSON.toJSONString(map);
 		return data;
 	}
+	
+	/**
+	 * 添加图书信息
+	 * @param book
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value = "bookAdd",method = RequestMethod.POST)
+	public int bookAdd(BookEntity book){
+		int i = bookService.bookAdd(book);
+		return i;
+	}
+	
+	/**
+	 * 修改图书信息
+	 * @param book
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value = "bookUpdate",method = RequestMethod.POST)
+	public int bookUpdate(BookEntity book){
+		int i = bookService.bookAdd(book);
+		return i;
+	}
+	
+	/**
+	 * 批量删除图书信息
+	 * @param studentEntity
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value = "bookDelete",method = RequestMethod.POST)
+	public int bookDelete(String ids){
+		List<Integer> list = new ArrayList<Integer>();
+		String[] strs = ids.split(",");
+        for(int j = 1; j < strs.length;j++){
+        	list.add(Integer.parseInt(strs[j]));
+        }
+		int i = bookService.bookDelete(list);
+		return i;
+	}
 }

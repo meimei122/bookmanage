@@ -36,6 +36,11 @@
 			$('.update').css({'display':'none'});
 			$('.add').css({'display':'block'});
 			
+			$.post('BookController/bookAdd',{},function(data){
+				  if(data>0){
+					  $("#book_manage_table").bootstrapTable('refresh', {url: "BookController/book"});
+				  }
+				});
 			
 		});
 		
@@ -61,10 +66,9 @@
 				id = row[0].sid;  
 			  }
 		  
-			$.post('BookController/restPsw',{sids:id},function(data){
+			$.post('BookController/bookUpdate',{sids:id},function(data){
 			  if(data>0){
 				  $("#book_manage_table").bootstrapTable('refresh', {url: "BookController/book"});
-				  alert('重置密码成功');
 			  }
 			});
 		});
@@ -85,7 +89,7 @@
 	  				for(var i = 0; i < row.length;i++){
 	  					ids += ","+ row[i].sid;
 	  				}
-	  				$.post('BookController/deleteStu',{ids:ids},function(data){
+	  				$.post('BookController/bookDelete',{ids:ids},function(data){
 	  	        	  if(data>0){
 	  	        		$("#book_manage_table").bootstrapTable('refresh', {url: "BookController/book"});
 	  	        	  }

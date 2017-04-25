@@ -17,4 +17,25 @@ public interface BookDao {
 	 * @return
 	 */
 	public List<BookEntity> book(BookEntity book);
+	
+	/**
+	 * 添加图书信息
+	 * @param book
+	 * @return
+	 */
+	public int bookAdd(BookEntity book);
+	
+	/**
+	 * 修改图书信息
+	 * @param book
+	 * @return
+	 */
+	public int bookUpdate(BookEntity book);
+	
+	/**
+	 * 删除图书信息
+	 * @param book
+	 * @return
+	 */
+	public int bookDelete(List<Integer> list);
 }
