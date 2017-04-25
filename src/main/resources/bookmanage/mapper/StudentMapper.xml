@@ -10,8 +10,24 @@
 		<result property = "borrow_num" column = "borrow_num" />
 	</resultMap>
 	
-	<!-- <select id="login" parameterType="AdminEntity" resultMap="AdminResultMap">
-		select * from admin where ausername=#{ausername} and apass=#{apass}
-	</select> -->
+	<select id="studetnInfo" parameterType="StudentEntity" resultMap="StudentResultMap">
+		select * from student
+		<where>  
+	        <if test="sid!=null and sid!='' ">  
+	            sid LIKE CONCAT(CONCAT('%', #{sid}),'%') 
+	        </if>  
+	    </where>
+	</select>
+	
+	<update id="updatePsw" parameterType="StudentEntity">
+		 update student set spass = '123456' where sid=#{sid}
+	</update>
+	
+	<delete id="deleteStu"  >  
+    	delete from student where sid in  
+      <foreach collection="list" item = "sid" open="(" separator="," close=")">  
+            #{sid}  
+    </foreach>    
+  </delete> 
 	
 </mapper>

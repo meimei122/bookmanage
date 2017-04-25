@@ -20,6 +20,10 @@ public class BorrowBookController {
 	@Resource
 	private BorrowBookService borrowBookService;
 	
+	/**
+	 * 统计数据页面借书信息
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping(value = "borrowBookInfo", method = RequestMethod.POST)
 	public List borrowBookInfo() {

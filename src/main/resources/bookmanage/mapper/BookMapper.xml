@@ -17,7 +17,7 @@
 	</select>
 	
 	<select id="book" resultMap="BookResultMap">
-		select  book_isbn,book_name,book_author,book_type,book_price,book_avanum from book
+		select * from book
 	</select>
 	
 </mapper>
