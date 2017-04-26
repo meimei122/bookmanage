@@ -112,7 +112,7 @@ public class LoginController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "index",method = RequestMethod.POST)
+	@RequestMapping(value = "index",method = RequestMethod.GET)
 	public String index(Model model) {
 		return "app/index";
 	}

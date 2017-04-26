@@ -28,7 +28,9 @@
 
 	<div class="leftsidebar_box">
 	</div>
-	
+	<div class="quit_div">
+		<a href="login" class="quit"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>退出</a>
+	</div>
 	<div id="right_content" class="right">
 	</div>
 </div>

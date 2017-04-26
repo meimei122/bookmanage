@@ -1,12 +1,13 @@
 body {
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 html,
 body {
 	height: 100%;
+	
 }
 
 img {
@@ -120,4 +121,16 @@ dd {
 	width: 88%;
     float: right;
     height: 100%;
+}
+.quit_div{
+	height: 30px;
+}
+.quit{
+	float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.quit .glyphicon{
+    top: 3px;
+    right: 3px;
 }
