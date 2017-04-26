@@ -11,7 +11,7 @@
 			 	height: 580,
 			 	striped:true,
 			    search:false,
-			    showRefresh:false,
+			    showRefresh:true,
 			    showColumns:true,
 			    showExport:true,
 			    showColumns:true,//显示字段

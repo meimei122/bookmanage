@@ -12,7 +12,7 @@
 	<div id="student_div">
 		<div id="student_toolbar">
 			<ul id="toolMenu" class="tool_menu">
-				<li><a id="restPsw"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>重置学生密码</a></li>
+				<li><a id="restPsw"><i class="fa fa-share" aria-hidden="true"></i>重置学生密码</a></li>
 				<li><a id="deleteStudent"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除学生信息</a></li>
 				<li><input id="sid_type" class="sidType" placeholder="学  号"/>
 				<button type="button" class="btn btn-info" id="querybtn">查 询</button></li>

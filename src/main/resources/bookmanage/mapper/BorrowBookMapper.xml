@@ -14,10 +14,18 @@
 		<result property = "outDate" column = "outDate" />
 	</resultMap>
 	
-	<sql id="column">date_format(borrow_time, '%Y-%m-%d') as borrow_time,date_format(return_time, '%Y-%m-%d')  as return_time,book_type,borrow_num,book_isbn,book_name,datediff(date_format(NOW(),'%Y-%m-%d'),date_format(return_time, '%Y-%m-%d')) as outDate</sql>
+	<sql id="column">sid,date_format(borrow_time, '%Y-%m-%d') as borrow_time,date_format(return_time, '%Y-%m-%d')  as return_time,book_type,borrow_num,book_isbn,book_name,datediff(date_format(NOW(),'%Y-%m-%d'),date_format(return_time, '%Y-%m-%d')) as outDate</sql>
 	
 	<select id="borrowInfo" resultMap="BorrowBookResultMap">
 		select book_type,SUM(borrow_num) as borrow_num from borrwbook GROUP BY book_type
 	</select>
+	
+	<select id="borrowBookInfo" parameterType="BorrowBookEntity" resultMap="BorrowBookResultMap">
+		select <include refid="column"></include>  from borrwbook  where book_isbn = #{book_isbn} and sid = #{sid}
+	</select>
+	
+	<delete id="clearBorrow">
+		delete from borrwbook where sid = #{sid} and book_isbn = #{book_isbn}
+	</delete>
 	
 </mapper>

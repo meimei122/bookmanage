@@ -83,7 +83,6 @@
 				return false ;
 			  }
 			
-			debugger;
 			$('#book_isbn2').val(row[0].book_isbn),
 			$('#book_name').val(row[0].book_name),
 			$('#book_author').val(row[0].book_author),

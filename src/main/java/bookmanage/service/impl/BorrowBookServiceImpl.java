@@ -22,4 +22,16 @@ public class BorrowBookServiceImpl implements BorrowBookService {
 		return borrowBookDao.borrowInfo();
 	}
 
+	@Override
+	public List<BorrowBookEntity> borrowBookInfo(BorrowBookEntity borrowBookEntity) {
+		// TODO Auto-generated method stub
+		return borrowBookDao.borrowBookInfo(borrowBookEntity);
+	}
+
+	@Override
+	public int clearBorrow(BorrowBookEntity borrowBookEntity) {
+		// TODO Auto-generated method stub
+		return borrowBookDao.clearBorrow(borrowBookEntity);
+	}
+
 }

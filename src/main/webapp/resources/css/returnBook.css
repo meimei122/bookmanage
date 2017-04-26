@@ -1,0 +1,48 @@
+#return_book_div button{
+	height: 34px;
+}
+#return_book_div .glyphicon {
+    top: 2px;
+}
+
+.tool_menu input {
+	border-radius: 5px;
+	height: 28px;
+}
+#sid{
+	margin-left: 15px;
+}
+#querybtn{
+	margin-left: 10px;
+	height: 30px !important;
+	padding-top: 4px;
+}
+
+.tool_menu li{
+	float: left;
+	background-color: #eee;
+	padding: 8px;
+}
+
+.tool_menu li a{
+	color: #626262;
+}
+
+#return_book_div .modal-body{
+	height: 335px;
+}
+
+#return_book_div .form-group{
+	width: 50%;
+    float: left;
+}
+
+#return_book_div .form-control{
+	width: 80%;
+}
+
+.message{
+	display: none;
+    color: red;
+    font-style: normal;
+}
