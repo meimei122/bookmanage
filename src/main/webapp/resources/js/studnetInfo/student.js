@@ -36,12 +36,12 @@
 			  id;
           
           if (row.length > 1) {
-        	  alert("选择项过多,请选择最多一项进行修改");
+        	  new TipBox({type:'tip',str:'选择项过多,请选择最多一项进行修改!',clickDomCancel:true,setTime:2000,hasBtn:true});
         	  return false ;
   		  }
           if(row.length == 0) {
-  			alert("请选择需要重置的数据！");
-  			return false ;
+        	  new TipBox({type:'tip',str:'请选择需要重置的数据!',clickDomCancel:true,setTime:2000,hasBtn:true});
+        	  return false ;
   		  }else{
   			id = row[0].sid;  
   		  }
@@ -49,7 +49,7 @@
           $.post('StudentController/restPsw',{sids:id},function(data){
         	  if(data>0){
         		  $("#student_table").bootstrapTable('refresh', {url: "StudentController/student"});
-        		  alert('重置密码成功');
+        		  new TipBox({type:'success',str:'重置密码成功',clickDomCancel:true,setTime:2000,hasBtn:true});
         	  }
           });
           
@@ -64,7 +64,7 @@
 				  ids = "";
 	          
 	          if(row.length == 0) {
-	  			alert("请至少选择一项进行操作");
+	        	  new TipBox({type:'tip',str:'请至少选择一项进行操作!',clickDomCancel:true,setTime:2000,hasBtn:true});
 	  			return false ;
 	  		  }else{
 	  			$("#delcfmModel").modal('show');

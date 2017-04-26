@@ -74,12 +74,12 @@
 	        	return row
 	        });
 		  
-			if (row.length > 1) {
-			  alert("选择项过多,请选择最多一项进行修改");
-			  return false ;
-			  }
+			if(row.length > 1) {
+				new TipBox({type:'tip',str:'选择项过多,请选择最多一项进行修改!',clickDomCancel:true,setTime:2000,hasBtn:true});
+				return false ;
+			}
 			if(row.length == 0) {
-				alert("请选择需要修改的数据！");
+				new TipBox({type:'tip',str:'请选择需要修改的数据!',clickDomCancel:true,setTime:2000,hasBtn:true});
 				return false ;
 			  }
 			
@@ -116,8 +116,8 @@
 				  ids = "";
 	          
 	          if(row.length == 0) {
-	  			alert("请至少选择一项进行操作");
-	  			return false ;
+	        	  new TipBox({type:'tip',str:'请至少选择一项进行操作!',clickDomCancel:true,setTime:2000,hasBtn:true});
+	        	  return false ;
 	  		  }else{
 	  			$("#delcfmModel").modal('show');
 	  			$("#sure").on("click", function(){

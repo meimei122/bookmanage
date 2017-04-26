@@ -37,8 +37,8 @@
 		        });
 			 
 			 if(row.length == 0) {
-	  			alert("请选择需要归还的图书信息！");
-	  			return false ;
+				 new TipBox({type:'tip',str:'请选择需要归还的图书信息!',clickDomCancel:true,setTime:2000,hasBtn:true});
+				 return false ;
 	  		 }
 			 
 			 var book_isbn = row[0].book_isbn,
@@ -71,7 +71,7 @@
 			 			$.post("BorrowBookController/clearBorrowInfo",{book_isbn:book_isbn,sid:sid},function(data){
 			 				if(data>0){
 			 					borrowInfo();
-			 					alert('还书成功');
+			 					new TipBox({type:'success',str:'还书成功!',clickDomCancel:true,setTime:2000,hasBtn:true});
 			 				}
 			 			});
 			 		}
@@ -80,7 +80,7 @@
 				 $.post("BorrowBookController/clearBorrowInfo",{book_isbn:book_isbn,sid:sid},function(data){
 	 				if(data>0){
 	 					borrowInfo();
-	 					alert('还书成功');
+	 					new TipBox({type:'success',str:'还书成功!',clickDomCancel:true,setTime:2000,hasBtn:true});
 	 				}
 	 			 });
 			 }

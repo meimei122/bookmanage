@@ -17,6 +17,10 @@
 <link type="text/css" href="resources/css/plugins/bootstrap/select2.css" rel="stylesheet"/>
 <link type="text/css" href="resources/css/plugins/bootstrap/bootstrap-editable.css" rel="stylesheet"/>
 <link rel="stylesheet" href="resources/css/index.css" />
+<!-- 弹框部分 -->
+<link rel="stylesheet" href="resources/css/plugins/other/mdialog.css" />
+<script type="text/javascript" src="resources/js/component/other/zepto.min.js"></script>
+<script type="text/javascript" src="resources/js/component/other/mdialog.js"></script>
 <title>后台管理系统</title>
 </head>
 <body id="bg">
