@@ -26,4 +26,11 @@ public interface StudentDao {
 	 * @return
 	 */
 	public int deleteStu(List<Integer> list);
+	
+	/**
+	 * 修改学生借书信息
+	 * @param list
+	 * @return
+	 */
+	public int updateStudent(Integer sid);
 }

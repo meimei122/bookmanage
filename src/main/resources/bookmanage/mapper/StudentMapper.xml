@@ -30,4 +30,7 @@
 	  </foreach>    
 	</delete> 
 	
+	<update id="updateStudent" parameterType="Integer">
+		 update student set borrow_num = (borrow_num + 1) where sid=#{sid}
+	</update>
 </mapper>

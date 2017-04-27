@@ -30,6 +30,12 @@ public class BorrowBookController {
 	@Resource
 	private BorrowBookService borrowBookService;
 	
+	@Resource
+	private BookService bookService;
+	
+	@Resource 
+	private StudentService studentService;
+	
 	/**
 	 * 统计数据页面借书信息
 	 * @return
@@ -91,7 +97,13 @@ public class BorrowBookController {
 	@ResponseBody
 	@RequestMapping(value = "clearBorrowInfo", method = RequestMethod.POST)
 	public int clearBorrowInfo(BorrowBookEntity borrowBookEntity) {
+		int j = 0;
 		int i = borrowBookService.clearBorrow(borrowBookEntity);
-		return i;
+		int stu = studentService.updateStudent(borrowBookEntity.getSid());
+		int book = bookService.updateBorrow(borrowBookEntity.getBook_isbn());
+		if(i>0&&stu>0&&book>0){
+			j = 1;
+		}
+		return j;
 	}
 }

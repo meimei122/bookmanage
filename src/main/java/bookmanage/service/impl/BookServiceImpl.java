@@ -45,4 +45,10 @@ public class BookServiceImpl implements BookService {
 		return bookDao.bookDelete(list);
 	}
 
+	@Override
+	public int updateBorrow(Integer book_isbn) {
+		// TODO Auto-generated method stub
+		return bookDao.updateBorrow(book_isbn);
+	}
+
 }

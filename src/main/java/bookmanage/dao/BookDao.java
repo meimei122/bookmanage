@@ -38,4 +38,11 @@ public interface BookDao {
 	 * @return
 	 */
 	public int bookDelete(List<Integer> list);
+	
+	/**
+	 * 修改借书信息
+	 * @param book
+	 * @return
+	 */
+	public int updateBorrow(Integer book_isbn);
 }

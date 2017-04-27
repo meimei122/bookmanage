@@ -34,4 +34,10 @@ public class StudentServiceImpl implements StudentService {
 		return studentDao.deleteStu(list);
 	}
 
+	@Override
+	public int updateStudent(Integer sid) {
+		// TODO Auto-generated method stub
+		return studentDao.updateStudent(sid);
+	}
+
 }
